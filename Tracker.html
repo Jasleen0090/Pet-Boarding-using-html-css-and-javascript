@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dog Breed Info Tracker</title>
+    <link rel="stylesheet" type="text/css" href="Trackerstyle.css">
+</head>
+<body>
+    <h1>Dog Breed Info Tracker</h1>
+
+    <form id="searchForm">
+        <label for="breedName">Breed Name:</label>
+        <input type="text" id="breedName" required>
+        <button type="submit">Search</button>
+    </form>
+
+    <div id="dogInfo"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#searchForm').on('submit', function(event) {
+                event.preventDefault();
+                var breedName = $('#breedName').val();
+                fetchDogInfo(breedName);
+            });
+        });
+
+        function fetchDogInfo(breedName) {
+            var apiUrl = 'https://api.api-ninjas.com/v1/dogs?name=' + breedName;
+            var apiKey = 'AIcFo1XbLsq5orpwxmEiRQ==k6INHE8G5TtmhH6M';
+
+            $.ajax({
+                method: 'GET',
+                url: apiUrl,
+                headers: { 'X-Api-Key': apiKey },
+                contentType: 'application/json',
+                success: function(result) {
+                    displayDogInfo(result);
+                },
+                error: function ajaxError(jqXHR) {
+                    console.error('Error: ', jqXHR.responseText);
+                }
+            });
+        }
+
+        function displayDogInfo(dogInfo) {
+            var dogInfoElement = document.getElementById('dogInfo');
+            var html = '';
+
+            if (dogInfo.length > 0) {
+                var dog = dogInfo[0];
+
+                html += '<h2>' + dog.name + '</h2>';
+                html += '<img src="' + dog.image_link + '" alt="Dog Image">';
+                html += '<p>Good with Children: ' + dog.good_with_children + '/5</p>';
+                html += '<p>Good with Other Dogs: ' + dog.good_with_other_dogs + '/5</p>';
+                html += '<p>Shedding: ' + dog.shedding + '/5</p>';
+                html += '<p>Grooming: ' + dog.grooming + '/5</p>';
+                html += '<p>Drooling: ' + dog.drooling + '/5</p>';
+                html += '<p>Coat Length: ' + dog.coat_length + '/5</p>';
+                html += '<p>Good with Strangers: ' + dog.good_with_strangers + '/5</p>';
+                html += '<p>Playfulness: ' + dog.playfulness + '/5</p>';
+                html += '<p>Protectiveness: ' + dog.protectiveness + '/5</p>';
+                html += '<p>Trainability: ' + dog.trainability + '/5</p>';
+                html += '<p>Energy Level: ' + dog.energy + '/5</p>';
+                html += '<p>Barking Level: ' + dog.barking + '/5</p>';
+                html += '<p>Life Expectancy: ' + dog.min_life_expectancy + '-' + dog.max_life_expectancy + ' years</p>';
+                html += '<p>Height (Male): ' + dog.min_height_male + '-' + dog.max_height_male + ' inches</p>';
+                html += '<p>Height (Female): ' + dog.min_height_female + '-' + dog.max_height_female + ' inches</p>';
+                html += '<p>Weight (Male): ' + dog.min_weight_male + '-' + dog.max_weight_male + ' pounds</p>';
+                html += '<p>Weight (Female): ' + dog.min_weight_female + '-' + dog.max_weight_female + ' pounds</p>';
+            } else {
+                html += '<p>No information found for the given dog breed.</p>';
+            }
+
+            dogInfoElement.innerHTML = html;
+        }
+    </script>
+</body>
+</html>

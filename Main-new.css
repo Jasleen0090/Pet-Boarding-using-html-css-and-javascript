@@ -1,0 +1,376 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "Poppins",sans-serif ;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+/*Top Banner*/
+.top-banner {
+    background-image: url("");
+    background-color: #2297ed;
+    background-size: 1500px;
+  }
+  .banner-text {
+    color: white;
+    padding: 15px, 30px;
+    text-align: center;
+  }
+
+/*Nav bar*/
+nav , .nav-links{
+    display: flex;
+}
+
+nav{
+    justify-content: space-between;
+    
+}
+
+.nav-links{
+    gap: 2rem;
+    list-style: none;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+
+}
+
+.Pet_logo{
+    display: flex;
+    height: 4rem;
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.section--text p{
+    font-weight: 600;
+
+}
+
+.section--text--p1{
+    text-align: center;
+}
+
+.section--text--p2{
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+.title{
+    font-size: 3rem;
+    text-align: center;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+    text-decoration-color: white;
+}
+
+a:hover{
+    color: #2297ed;
+    text-decoration: underline;
+    text-underline-offset: 0.4rem;
+    text-decoration-color: #2297ed;
+    font-weight: 800;
+}
+
+.btn{
+    background-color: #2297ed;
+    border-radius: 1rem;
+    color: black;
+    text-decoration: none;
+    text-decoration-color: white;
+    font-weight: 100;
+    margin: 1rem 1rem;
+    padding: 10px 32px;
+
+}
+
+.btn:hover{
+    color: white;
+    text-decoration: none;
+    text-underline-offset: 0.4rem;
+    text-decoration-color: #1d69a3;
+    font-weight: 500;
+}
+
+/*About*/
+
+#about{
+    display: flex;
+    justify-content: center;
+}
+
+.centred{
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.back-img{
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    width: 1680px;
+    height: 700px;
+    
+ }
+
+h1{
+    font-size: 4rem;
+
+ }
+
+p{
+    font-size: 1.5rem;
+}
+
+/*Icon*/
+#socials-container{
+    position: absolute;
+    display: flex;
+    justify-content:center;
+    margin-top: 1rem;
+    gap: 1rem;
+    top: 20%;
+    right: 20%;
+}
+
+.icon{
+    cursor: pointer;
+    height: 3rem;
+}
+
+/*Bread Info*/
+
+#bread{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 50px;
+}
+
+.right-img{
+    position: relative;
+}
+.left{
+    justify-content: center;
+    margin-left: 1rem;
+}
+.text{
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+}
+
+.tracker{
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    padding: 1rem;
+    align-items: center;
+    margin-left: 1rem;
+    border-radius: 1rem;
+    color: white;
+    background-color: #2297ed;
+}
+
+.tracker:hover{
+    cursor: pointer;
+    background-color: #1d69a3;
+    color: white;
+    text-decoration: none;
+}
+
+
+
+/*Cards*/
+
+.main{
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+.card{
+	margin: 20px;
+	box-shadow: 0 0 15px rgba(0,0,0,0.2);
+	width: 320px;
+	height: 520px;
+	border-radius: 8px;
+	padding: 15px;
+	text-align: center;
+	color: #fff;
+}
+
+.card h1,
+.card h2{
+	margin: 10px;
+}
+.card h2{
+	font-size: 28px;
+}
+
+hr{
+	opacity: 0.3;
+}
+
+.card li{
+	margin: 5px;
+	padding: 5px;
+	text-align: left;
+	font-size: 18px;
+}
+
+.card button{
+	position: absolute;
+	display: block;
+	background-color: transparent;
+	padding: 10px 50px;
+	margin: 85px;
+	color: #fff;
+	border:1px solid;
+	
+}
+
+.buy-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left:4.5rem;
+    margin-top: 1rem;
+    padding: 8px;
+    width: 50%;
+    border: 1px solid rgb(239, 112, 8);
+    border-radius: 1rem;
+    background-color: white;
+}
+
+.btn1{
+    color: black;
+}
+
+.btn1:hover{
+    color: black;
+    text-decoration: none;
+}
+
+.btn2{
+    color: black;
+}
+
+.btn2:hover{
+    color: black;
+    text-decoration: none;
+}
+
+.btn3{
+    color: black;
+    
+}
+
+.btn3:hover{
+    color: black;
+    text-decoration: none;
+}
+
+
+.card:nth-child(1){
+	background: rgb(66,187,223);
+	background: linear-gradient(90deg, rgba(66,187,223,1) 0%, rgba(91,134,229,1) 100%);
+}
+.card:nth-child(2){
+	background: rgb(66,187,223);
+	background: linear-gradient(113deg, rgba(66,187,223,1) 0%, rgba(91,229,132,1) 100%);
+	height: 580px;
+	box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+.card:nth-child(3){
+	background: rgb(66,143,223);
+	background: linear-gradient(113deg, rgba(66,143,223,1) 0%, rgba(229,91,193,1) 100%);
+}
+
+
+
+
+.pack{display: flex;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+/*Contact*/
+
+#contact{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 70vh;
+}
+
+.contact-info-upper-container{
+    display: flex;
+    justify-content: center;
+    border-radius: 2rem;
+    border: rgb(53, 53, 53) 0.1rem solid;
+    border-color: rgb(163, 163, 163);
+    background: (250,250,250);
+    margin: 2rem auto;
+    padding: 0.5rem;
+}
+
+.contact-info-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 1rem;
+}
+
+.align{
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+}
+.contact-info-container p{
+    font-size: larger;
+}
+
+.contact-icon{
+    cursor: default;
+}
+
+.email-icon{
+   height: 2.5rem; 
+}
+
+/*Footer*/
+footer{
+    height: 26vh;
+    margin: 0 1rem;
+}
+
+footer p{
+    text-align: center;
+}
+
